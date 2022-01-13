@@ -79,21 +79,7 @@ pipeline {
                 } else {
                     echo 'BUILD_TAG not folder deleted'
                 }
-
-                if(ON_SUCCESS_SEND_EMAIL == true){
-                    emailext body: "Pipeline SUCCESS!\nJOB_NAME: ${JOB_NAME}\nBUILD_NUMBER: ${BUILD_NUMBER}\nBUILD_URL: ${BUILD_URL}",
-                    subject: 'Always is good!', to: 'isac.gheorghe@isa.utm.md'
-                }
-                else{
-                    emailext body: "Pipeline ERROR!\nJOB_NAME: ${JOB_NAME}\nBUILD_NUMBER: ${BUILD_NUMBER}\nBUILD_URL: ${BUILD_URL}",
-                    subject: 'Oh! You have some errors!', to: 'isac.gheorghe@isa.utm.md'
-                }
-
-
-
             }
-
-            //junit '*/junit.xml'
 
         }
 
