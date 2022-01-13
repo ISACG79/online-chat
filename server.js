@@ -21,7 +21,7 @@ function dbConnection(callback) {
 		db.connect(function (err) {
 			//if (err) console.log("db err :" + err);
 			//else console.log('db connected')
-			callback(true);
+			return true;
 		})
 	if (callback) callback(true);
 }
