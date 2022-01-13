@@ -16,7 +16,7 @@ pipeline {
 
         stage("Fetch repository") {
             steps {
-                git 'https://github.com/ISACG79/'
+                git 'https://github.com/ISACG79/online-chat.git'
             }
         }
 
