@@ -20,7 +20,8 @@ function dbConnection(callback) {
 	if (db.state == 'disconnected')
 		db.connect(function (err) {
 			if (err) console.log("db err :" + err);
-			else console.log('db connected');
+			else console.log('db connected')
+			callback(true);
 		})
 	if (callback) callback(true);
 }
